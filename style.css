@@ -92,6 +92,7 @@ header {
   padding-top: 10%;
   display: flex;
   justify-content: left;  
+
 }
 
 .body-text {
@@ -100,23 +101,34 @@ header {
   align-items: flex-start;
   padding-left: 6%;
   color: white;
+
 }
 
 .body-text .h1 {
   color: var(--yellow);
   font-size: 30px;
+  width: 450px;
+}
+
+.texto-informativo {
+  padding-top: 5px;
+  display: flex;
+  font-size: 18px;
+  width: 450px;
+
 }
 
 .button-cadastrar {
   margin-top: 10px;
   background-color: var(--yellow);
-  color: #fff;
+  color:var(--roxo);
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  padding: 12px 40%;
+  padding: 15px;
+  width: 450px;
 }
 
 
