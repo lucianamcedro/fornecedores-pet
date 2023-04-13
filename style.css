@@ -13,11 +13,25 @@
   text-decoration: none;
 }
 :root {
-  --bg-color: #fdfdfd;
-  --logo-point: hsl(213, 70%, 58%);
-  --logo-color: rgb(238, 171, 27);
-  --header-link: #0099ff;
-  --header-text: rgba(255, 255, 255, 0.778);
+  --roxo: rgba(86,63,145,255);
+  --yellow: #f2b22e;
+}
+
+
+.container-inicio {
+  background-image: url("./img/bg.jpg");
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+
+
+}
+
+.container-meio {
+  background-color: var(--roxo);
+  z-index: -1;
+  
+
 }
 
 header {
@@ -43,21 +57,25 @@ header {
 .header-link a {
   color: rgba(255, 255, 255, 0.778);
   font-weight: 700;
-  transition: 0.3s;
+  font-size: 20px;
+  transition: 0.5s;
 }
 
 .header-link a:hover {
-  color: var(--logo-color);
+  color: var(--roxo);
 }
 
-.header-link li:last-child {
+.header-link li:last-child a:last-child{
   border-radius: 10px;
   padding: 12px 20px;
-  background-color: var(--logo-color);
+  background-color: var(--roxo);
+  color: white;
+  transition: 0.5s;
+  
 }
 
 .logo {
-  color: var(--logo-color);
+  color: var(--yellow);
   display: inline-block;
   font: 400 2rem "Righteous", cursive;
   font-size: 2.8rem;
@@ -67,38 +85,31 @@ header {
 
 .logo .span {
   display: inline-block;
-  color: var(--logo-point);
+  color: white;
 }
 
 .container {
-  padding-top: 5%;
+  padding-top: 10%;
   display: flex;
-  justify-content: space-around;  
-}
-
-body {
-  background-image: url("./img/bg.jpg");
-  background-size: cover;
-  background-position: initial;
-
+  justify-content: left;  
 }
 
 .body-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 10%;
+  padding-left: 6%;
   color: white;
 }
 
 .body-text .h1 {
-  color: var(--logo-color);
+  color: var(--yellow);
   font-size: 30px;
 }
 
 .button-cadastrar {
   margin-top: 10px;
-  background-color: var(--logo-color);
+  background-color: var(--yellow);
   color: #fff;
   font-weight: bold;
   font-size: 15px;
@@ -108,12 +119,6 @@ body {
   padding: 12px 40%;
 }
 
-.imagem-dog {
-  width: 600px;
-  height: 600px;
-  background-image: url("./img/bg-dog.png");
-  background-position: center;
- 
-}
+
 
 
