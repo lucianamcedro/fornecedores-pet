@@ -19,7 +19,7 @@
 
   
   .container-inicio {
-    background-image: url("../inicio/img/bg-contato.jpg");
+    background-image: url("./img/bg-contato.jpg");
     background-size: cover;
     background-position: center 30%;
     height: 100vh;

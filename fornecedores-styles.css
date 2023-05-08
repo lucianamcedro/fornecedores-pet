@@ -19,7 +19,7 @@
 
 
 .container-inicio {
-  background-image: url("../inicio/img/bg-fornecedores.jpg");
+  background-image: url("./img/bg-fornecedores.jpg");
   background-size: cover;
   height: 100vh;
   background-color: var(--roxo);
