@@ -21,8 +21,10 @@
 .container-inicio {
   background-image: url("./img/bg-fornecedores.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 130vh;
   background-color: var(--roxo);
+  background-position: center 30%;
+
 }
 
 .fornecedores-title {
@@ -30,7 +32,7 @@
     width: 500px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 60px;
     margin-left: 130px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;

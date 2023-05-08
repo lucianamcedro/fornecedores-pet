@@ -77,7 +77,7 @@
     background-color: #f6f6f6;
     height: 30px;
     width: calc(100%);
-
+    resize: none;
   }
   
   .container-contact input[type="text"]::placeholder {

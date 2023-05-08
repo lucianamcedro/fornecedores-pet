@@ -1,3 +1,7 @@
+$(document).ready(function(){
+  $('#telefone').inputmask('99 99999-9999');
+});
+
 const form = document.querySelector("#contact-form");
 const successModal = document.querySelector("#success-modal");
 
