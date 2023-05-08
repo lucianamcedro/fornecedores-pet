@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --roxo: rgba(86,63,145,255);
+  --yellow: #f2b22e;
+}
+
+
+.container-inicio {
+  background-image: url("../inicio/img/bg-fornecedores.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-color: var(--roxo);
+}
+
+.fornecedores-title {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 130px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: var(--yellow);
+    text-transform: uppercase;
+}
+
+#empresas-container {
+    position: relative;
+    max-width: 1080px;
+    margin: 10px auto 0;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+  }
+  
+  .empresa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 5px;
+    text-align: center;
+  }
+  
+  .empresa img {
+    display: block;
+    margin-right: 10px;
+    max-width: 90px;
+    margin-bottom: 5px;
+  }
+  
+  .empresa h2 {
+    font-size: 16px;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 600;
+    color: var(--roxo);
+  }
+  
+  .empresa p {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .empresa a {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+    color: var(--roxo);
+  }
+  

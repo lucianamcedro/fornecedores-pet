@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../inicio/header.css">
+        <link rel="icon" type="image/png" href="../inicio/img/ico.jpg">
+      
+
+        <title>Contato</title>
+    </head>
+
+    <body>
+        <div class="container-inicio">
+            <header>
+                <h1>
+                    <a href="../inicio/index.html" class="logo">AuPet<span class="span">.</span></a>
+                </h1>
+                <div class="header-link">
+                    <li>
+                        <a href="../inicio/index.html">Inicio</a></li>
+                    <li> <a href="./contato.html" class="contato">Contato</a></li>
+                    <li><a href="../fornecedores/fornecedores.html"
+                            class="fornecedores">Fornecedores</a></li>
+                    <li><a href="#login" class="login">Login</a></li>
+                </div>
+            </header>
+            <div id="success-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>Seu e-mail foi enviado com sucesso!</p>
+                </div>
+              </div>
+
+            <div class="container-contact">
+            
+                <form action="https://api.staticforms.xyz/submit" method="POST" id="contact-form">
+                    <input type="hidden" name="accessKey"
+                        value="a6a45852-f3f1-4088-a562-a3a986c48610">
+                    <div style="display: inline-block; width: calc(50% - 5px);">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="name"
+                            placeholder="Digite seu nome" style="width: 100%;">
+                    </div>
+                    <div style="display: inline-block; width: calc(50% - 5px);">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="phone"
+                            placeholder="(99) 99999" style="width:
+                            100%;"   pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" required>
+                    </div>
+                    <div style="display: inline-block; width: calc(100%);">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email"
+                            placeholder="Digite seu email" style="width: 100%;"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            required>
+                    </div>
+                    <div style="display: inline-block; width: calc(100%);">
+                        <label for="email">Messagem:</label>
+                        <textarea name="message" style="height: 100px;"></textarea>
+                    </div>
+
+                    <div style="display: inline-block; width: calc(100%);">
+                        <button type="submit" id="enviar-btn" style="width:
+                            100%;">Enviar</button>
+                    </div>
+                </form> 
+            </div>
+            <script src="./script.js"></script>
+
+        </body>
+    </html>
