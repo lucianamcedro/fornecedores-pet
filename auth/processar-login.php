@@ -1,27 +1,31 @@
 <?php
     session_start();
 
-    if (empty($_POST) || empty($_POST["email"]) || empty($_POST["senha"])) {
+    if (empty($_POST) || empty($_POST["nome"]) || empty($_POST["senha"])) {
         header("Location: login.php");
         exit();
     }
 
-    include('./config.php');
+    include('../auth/config.php');
 
-    $email = $_POST["email"];
+    $nome = $_POST["nome"];
     $senha = $_POST["senha"];
 
     $sql = "SELECT * FROM usuarios 
-    WHERE email = '{$email}'
+    WHERE nome = '{$nome}'
     AND senha = '{$senha}'";
 
-    $res = $conn->query($sql) or die($conn->error);
-    $row = $res->fetch_object();
+    $res = $conn->query($sql);
+
+    if (!$res) {
+        die("Erro na consulta: " . mysqli_error($conn));
+    }
+
     $qtd = $res->num_rows;
 
-    if ($email == "admin" && $senha == "admin") {
-        $_SESSION["email"] = $email;
-        header("Location: listar-usuarios.php");
+    if ($qtd > 0) {
+        $_SESSION["nome"] = $nome;
+        header("Location: ../cadastro/listar-usuarios.php");
         exit();
     } else {
         echo "<script>alert('Usuário e/ou senha incorreto(s)');</script>";
