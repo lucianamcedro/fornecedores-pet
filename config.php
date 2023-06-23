@@ -1,10 +1,12 @@
-
 <?php
-    define('HOST', 'localhost');
-    define('USER', 'root');
-    define('PASS', '');
-    define('BASE', 'cadastro');
+define('HOST', 'localhost');
+define('USER', 'root');
+define('PASS', '');
+define('BASE', 'cadastro');
 
-    $conn = new MYSQLi(HOST,USER,PASS,BASE);
+$conn = new mysqli(HOST, USER, PASS, BASE);
+
+if ($conn->connect_error) {
+    die("Falha na conexão: " . $conn->connect_error);
+}
 ?>
-

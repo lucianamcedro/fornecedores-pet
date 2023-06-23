@@ -1,26 +1,26 @@
 <?php
     session_start();
 
-    if (empty($_POST) || empty($_POST["nome"]) || empty($_POST["senha"])) {
+    if (empty($_POST) || empty($_POST["email"]) || empty($_POST["senha"])) {
         header("Location: login.php");
         exit();
     }
 
     include('config.php');
 
-    $nome = $_POST["nome"];
+    $email = $_POST["email"];
     $senha = $_POST["senha"];
 
     $sql = "SELECT * FROM usuarios 
-    WHERE nome = '{$nome}'
+    WHERE email = '{$email}'
     AND senha = '{$senha}'";
 
     $res = $conn->query($sql) or die($conn->error);
     $row = $res->fetch_object();
     $qtd = $res->num_rows;
 
-    if ($nome == "admin" && $senha == "admin") {
-        $_SESSION["nome"] = $nome;
+    if ($email == "admin" && $senha == "admin") {
+        $_SESSION["email"] = $email;
         header("Location: listar-usuarios.php");
         exit();
     } else {
