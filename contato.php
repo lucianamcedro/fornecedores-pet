@@ -26,7 +26,7 @@
                     <li> <a href="./contato.php" class="contato">Contato</a></li>
                     <li><a href="./fornecedores.php"
                             class="fornecedores">Fornecedores</a></li>
-                            <li><a href="./login.php" class="login">Login</a></li>
+                            <li><a href="./auth/login.php" class="login">Login</a></li>
                 </div>
             </header>
             <div id="success-modal" class="modal">

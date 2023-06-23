@@ -1,7 +1,7 @@
 
 <h1>LISTAR USUARIOS</h1>
     <?php
-        include_once('processar-login.php');
+        include_once('../auth/processar-login.php');
             
             $sql = "SELECT * FROM usuarios";
 

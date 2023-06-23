@@ -21,14 +21,14 @@
                     <a href="./index.php">Inicio</a></li>
                     <li>   <a href="./contato.php" class="contato">Contato</a></li>
                <li><a href="./fornecedores.php" class="fornecedores">Fornecedores</a></li> 
-                <li><a href="./login.php" class="login">Login</a></li>
+               <li><a href="./auth/login.php" class="login">Login</a></li>
             </div>
         </header>
         <div class="container">
             <div class="body-text">
                 <h1 class="h1">Cuide dos pets conosco e torne-se um fornecedor de confiança.</h1>
                 <p class="texto-informativo">Se você é um fornecedor comprometido com a saúde e bem-estar dos animais, junte-se a nós e faça parte da nossa missão de proporcionar produtos de excelência. Trabalharemos juntos para garantir a satisfação de todos os nossos clientes, desde os peludos de quatro patas até seus tutores.</P>
-                    <br> <a href="./novo-usuario.php""><button class="button-cadastrar">SEJA NOSSO PARCEIRO</button></a>
+                    <br> <a href="./cadastro/novo-usuario.php""><button class="button-cadastrar">SEJA NOSSO PARCEIRO</button></a>
             </div>
         </div>
     </div>

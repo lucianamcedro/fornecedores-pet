@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+    include('../auth/config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "<script>alert('Cadastrado com sucesso!');</script>";
-        echo "<script>location.href='index.php';</script>";
+        echo "<script>location.href='../index.php';</script>";
     } else {
         echo "<script>alert('Não foi possível cadastrar!');</script>";
         echo "<script>location.href='index.php';</script>";

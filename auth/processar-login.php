@@ -6,7 +6,7 @@
         exit();
     }
 
-    include('config.php');
+    include('./config.php');
 
     $email = $_POST["email"];
     $senha = $_POST["senha"];
