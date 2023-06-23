@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="./fornecedores-styles.css">
-    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./css/fornecedores-styles.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="icon" type="image/png" href="./img/ico.jpg">
     <title>Fornecedores</title>
 
@@ -40,6 +40,6 @@
 
         <div id="empresas-container"></div>
     </div>
-          <script src="./fornecedores-script.js"></script>
+          <script src="./script/fornecedores-script.js"></script>
     </body>
 </html>

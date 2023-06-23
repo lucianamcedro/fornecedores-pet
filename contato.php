@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./contato-style.css">
-        <link rel="stylesheet" href="./header.css">
+        <link rel="stylesheet" href="./css/contato-style.css">
+        <link rel="stylesheet" href="./css/header.css">
         <link rel="icon" type="image/png" href="/img/ico.jpg">
       
 
@@ -26,7 +26,7 @@
                     <li> <a href="./contato.php" class="contato">Contato</a></li>
                     <li><a href="./fornecedores.php"
                             class="fornecedores">Fornecedores</a></li>
-                    <li><a href="#login" class="login">Login</a></li>
+                            <li><a href="./login.php" class="login">Login</a></li>
                 </div>
             </header>
             <div id="success-modal" class="modal">
@@ -70,7 +70,7 @@
                     </div>
                 </form> 
             </div>
-            <script src="./contato-script.js"></script>
+            <script src="./script/contato-script.js"></script>
 
         </body>
     </html>

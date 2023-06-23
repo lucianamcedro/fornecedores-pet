@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="icon" type="image/png" href="./img/ico.jpg">
     <title>Au Pet.</title>
 </head>
@@ -21,14 +21,14 @@
                     <a href="./index.php">Inicio</a></li>
                     <li>   <a href="./contato.php" class="contato">Contato</a></li>
                <li><a href="./fornecedores.php" class="fornecedores">Fornecedores</a></li> 
-                <li><a href="#login" class="login">Login</a></li>
+                <li><a href="./login.php" class="login">Login</a></li>
             </div>
         </header>
         <div class="container">
             <div class="body-text">
                 <h1 class="h1">Cuide dos pets conosco e torne-se um fornecedor de confiança.</h1>
                 <p class="texto-informativo">Se você é um fornecedor comprometido com a saúde e bem-estar dos animais, junte-se a nós e faça parte da nossa missão de proporcionar produtos de excelência. Trabalharemos juntos para garantir a satisfação de todos os nossos clientes, desde os peludos de quatro patas até seus tutores.</P>
-                    <br> <button class="button-cadastrar">SEJA NOSSO PARCEIRO</button>
+                    <br> <button class="button-cadastrar"><a href="./novo-usuario.php">SEJA NOSSO PARCEIRO</a></button>
             </div>
         </div>
     </div>
@@ -56,6 +56,6 @@
     </div>
     <br><br>
   </div>
-  <script src="./script.js"></script>
+  <script src="./script/script.js"></script>
 </body>
 </html> 

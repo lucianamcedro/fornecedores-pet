@@ -20,7 +20,7 @@
 
 
 .container-inicio {
-  background-image: url("./img/bg.jpg");
+  background-image: url("../img/bg.jpg");
   background-size: cover;
   background-position: center top;
   height: 100vh;
@@ -36,8 +36,6 @@
   
 
 }
-
-
 
 .container {
   padding-top: 10%;
