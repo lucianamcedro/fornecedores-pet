@@ -18,13 +18,13 @@
         <div class="container-inicio">
             <header>
                 <h1>
-                    <a href="./index.html" class="logo">AuPet<span class="span">.</span></a>
+                    <a href="./index.php" class="logo">AuPet<span class="span">.</span></a>
                 </h1>
                 <div class="header-link">
                     <li>
-                        <a href="./index.html">Inicio</a></li>
-                    <li> <a href="./contato.html" class="contato">Contato</a></li>
-                    <li><a href="./fornecedores.html"
+                        <a href="./index.php">Inicio</a></li>
+                    <li> <a href="./contato.php" class="contato">Contato</a></li>
+                    <li><a href="./fornecedores.php"
                             class="fornecedores">Fornecedores</a></li>
                     <li><a href="#login" class="login">Login</a></li>
                 </div>
