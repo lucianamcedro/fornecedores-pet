@@ -24,12 +24,21 @@
     $qtd = $res->num_rows;
 
     if ($qtd > 0) {
-        $_SESSION["nome"] = $nome;
-        header("Location: ../cadastro/listar-usuarios.php");
-        exit();
+        $row = $res->fetch_assoc();
+        $_SESSION["usuario"] = $row["nome"]; 
+    
+        if ($_SESSION["usuario"] != 'admin') { 
+            header("Location: ../produtos/lista-produtos.php");
+            exit();
+        } else {
+            header("Location: ../cadastro/listar-usuarios.php");
+            exit();
+        }
     } else {
         echo "<script>alert('Usuário e/ou senha incorreto(s)');</script>";
-        echo "<script>location.href='login.php'</script>";
+        echo "<script>window.location.href='login.php';</script>";
         exit();
     }
+    
+    
 ?>

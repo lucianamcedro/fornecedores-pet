@@ -10,7 +10,7 @@
             header("Location: listar-usuarios.php");
             exit();
         } else {
-            echo "Erro ao excluir o usuário: " . $conn->error;
+            echo "Erro ao excluir o usuário: " . mysqli_error($conn);
         }
     }
 ?>
