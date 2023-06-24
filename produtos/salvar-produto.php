@@ -16,7 +16,7 @@
             echo "<script>location.href='lista-produtos.php'</script>";
             exit();
         } else {
-            echo "Erro ao criar produto: " . $conn->error;
+            echo "Erro ao criar produto: " .  mysqli_error($conn);
         }
     }
 ?>

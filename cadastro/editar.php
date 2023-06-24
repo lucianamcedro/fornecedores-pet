@@ -44,7 +44,7 @@
         $res = $conn->query($sql);
 
         if ($res === false) {
-            die("Erro na consulta: " . $conn->error);
+            die("Erro na consulta: " .  mysqli_error($conn));
         }
 
         if ($res->num_rows === 1) {
@@ -62,7 +62,7 @@
         $sql = "UPDATE usuarios SET nome = '$nome', email = '$email', senha = '$senha', data_nascimento = '$dataNascimento' WHERE id = $id";
 
         if ($conn->query($sql) === false) {
-            die("Erro ao atualizar o usuário: " . $conn->error);
+            die("Erro ao atualizar o usuário: " .  mysqli_error($conn));
         }
 
         header("Location: listar-usuarios.php");
