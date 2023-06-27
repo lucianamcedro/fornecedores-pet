@@ -25,11 +25,9 @@
         </header>
         <div class="container-cadastrar">
             <form action="salvar-usuario.php" method="POST">
-                <form action="salvar-usuario.php" method="POST">
-
                 <div style="display: inline-block; width: calc(100%);">
                         <label for="nome">Nome:</label>
-                        <input type="text" class="form-control" id="nome" name="name" placeholder="Digite seu nome"
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome"
                             style="width: 100%;">
                     </div>
                     <div style="display: inline-block; width: calc(100%);">
@@ -43,7 +41,7 @@
                     </div>
                     <div style="display: inline-block; width: calc(100%);">
                         <label for="telefone">Senha:</label>
-                        <input type="password" name="senha" class="form-control" name="phone" style="width:
+                        <input type="password" name="senha" class="form-control" style="width:
                             100%;">
                     </div>
 
@@ -52,6 +50,8 @@
                             100%;">Enviar</button>
                     </div>
                 </form>
+
+                
         </div>
         <script src="../script/contato-script.js"></script>
 

@@ -1,18 +1,18 @@
 <?php
     session_start();
 
-    if (empty($_POST) || empty($_POST["nome"]) || empty($_POST["senha"])) {
+    if (empty($_POST) || empty($_POST["email"]) || empty($_POST["senha"])) {
         header("Location: login.php");
         exit();
     }
 
     include('../auth/config.php');
 
-    $nome = $_POST["nome"];
+    $email = $_POST["email"];
     $senha = $_POST["senha"];
 
     $sql = "SELECT * FROM usuarios 
-    WHERE nome = '{$nome}'
+    WHERE email = '{$email}'
     AND senha = '{$senha}'";
 
     $res = $conn->query($sql);
@@ -25,9 +25,9 @@
 
     if ($qtd > 0) {
         $row = $res->fetch_assoc();
-        $_SESSION["usuario"] = $row["nome"]; 
+        $_SESSION["usuario"] = $row["email"]; 
     
-        if ($_SESSION["usuario"] != 'admin') { 
+        if ($_SESSION["usuario"] != 'admin@gmail.com') { 
             header("Location: ../produtos/lista-produtos.php");
             exit();
         } else {
@@ -39,6 +39,4 @@
         echo "<script>window.location.href='login.php';</script>";
         exit();
     }
-    
-    
 ?>
