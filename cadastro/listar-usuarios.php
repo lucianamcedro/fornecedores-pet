@@ -44,7 +44,7 @@
             $qtd = $res->num_rows;
 
             if ($qtd > 0) {
-                echo "<h1>Usúarios Cadastrados</h1>";
+                echo "<h1>Usuários Cadastrados</h1>";
                 echo "<table class='table table-rover table-striped table-bordered'>";
                 echo "<tr>";
                 echo "<th>ID</th>";
@@ -52,7 +52,7 @@
                 echo "<th>Email</th>";
                 echo "<th>Data de Nascimento</th>";
                 echo "<th>Ações</th>";
-                echo "</tr>";
+                echo "<th>Produtos</th>"; 
 
                 while ($row = $res->fetch_assoc()) {
                     echo "<tr>";
@@ -63,7 +63,10 @@
                     echo "<td class='buttons'>";
                     echo "<button onclick=\"location.href='editar.php?id=" . $row["id"] . "';\" class='btn btn-success custom-button'><i class='fas fa-pencil-alt btn-icon'></i>Editar</button>";
                     echo "<button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluir.php?id=" . $row["id"] . "';} else{false}\" class='btn btn-danger custom-button'><i class='fas fa-trash-alt btn-icon'></i>Excluir</button>";
-                    echo "</td>";                    
+                    echo "</td>";
+                    echo "<td>"; 
+                    echo "<button onclick=\"location.href='ver_produtos.php?id=" . $row["id"] . "';\" class='btn btn-primary custom-button'><i class='fas fa-eye btn-icon'> </i>  Exibir</button>";
+                    echo "</td>";
                     echo "</tr>";
                 }
 

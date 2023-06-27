@@ -29,7 +29,7 @@
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
-    max-width: 100vh;
+    max-width: 110vh;
     box-sizing: border-box;
     margin: 0 auto;
     margin-top: 10vh;
@@ -41,7 +41,7 @@
 }
 
 .container-usuarios table {
-    width: 100%;
+    width: 90%;
 }
 
 .container-usuarios th,
@@ -77,10 +77,14 @@
     justify-content: center;
 }
 
+.container-usuarios i {
+    margin-right: 5px;
+}
 .container-usuarios .btn-success {
     background-color: var(--yellow);
     color: black;
     border: none;
+    
 }
 
 .container-usuarios .btn-success:hover {
@@ -97,10 +101,24 @@
     background-color: #c82333;
 }
 
-.container-usuarios .btn-icon {
-    margin-right: 5px;
+.container-usuarios .btn-primary {
+    background-color: #0f0f0f59;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    flex-grow: 1;
+    padding: 6px 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.container-usuarios .btn-primary:hover {
+    background-color: var(--yellow);
+}
 
 .header-link {
     display: flex;
@@ -127,7 +145,7 @@
     letter-spacing: -2px;
     font-weight: 700;
 }
-  
+
 .logo .span {
     display: inline-block;
     color: white;
@@ -144,4 +162,16 @@ header {
     background: transparent;
     background-color: transparent;
     padding: 10px 6%;
+}
+
+.header-link li:last-child a:last-child {
+    border-radius: 10px;
+    padding: 12px 20px;
+    background-color: var(--roxo);
+    color: white;
+    transition: 0.5s;
+}
+
+.header-link li:last-child a:last-child:hover {
+    background-color: #ffda6a;
 }
