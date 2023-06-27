@@ -19,8 +19,6 @@
 }
 
 
-
-
 .container-inicio {
     background-image: url("../img/bg-contato.jpg");
     background-size: cover;
@@ -143,6 +141,7 @@ header {
     background: transparent;
     background-color: transparent;
     padding: 10px 6%;
+    
   }
   
   .header-link {
@@ -157,6 +156,7 @@ header {
     font-weight: 700;
     font-size: 20px;
     transition: 0.5s;
+    text-decoration: none;
   }
   
   .header-link a:hover {
@@ -169,11 +169,14 @@ header {
     font: 400 2rem "Righteous", cursive;
     font-size: 2.8rem;
     letter-spacing: -2px;
-    font-weight: 700;
+    font-weight: 700;    
+    text-decoration: none;
   }
   
+
   .logo .span {
     display: inline-block;
     color: white;
+    text-decoration: none;
   }
-  
+

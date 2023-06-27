@@ -23,10 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result_check_email = $conn->query($sql_check_email);
 
     if ($result_check_email->num_rows > 0) {
-        echo "<script>alert('O email informado já está cadastrado!');</script>";
-        echo "<script>location.href='../cadastro/novo-usuario.php';</script>";
+        header("Location: ../cadastro/novo-usuario.php?error=email&nome=" . urlencode($nome) . "&data_nascimento=" . urlencode($data_nascimento));
         exit();
     }
+    
 
     $sql = "INSERT INTO usuarios (nome, email, senha, data_nascimento)
     VALUES ('$nome', '$email', '$senha', '$data_nascimento')";

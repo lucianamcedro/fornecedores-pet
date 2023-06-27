@@ -19,8 +19,6 @@
 }
 
 
-
-
 .container-inicio {
     background-image: url("../img/bg-contato.jpg");
     background-size: cover;
@@ -138,6 +136,7 @@ header {
     background: transparent;
     background-color: transparent;
     padding: 10px 6%;
+    
   }
   
   .header-link {
