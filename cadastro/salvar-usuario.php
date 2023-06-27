@@ -13,6 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
+    if (strlen($senha) < 4) {
+        echo "<script>alert('A senha deve ter no mínimo 4 caracteres!');</script>";
+        echo "<script>location.href='../cadastro/novo-usuario.php';</script>";
+        exit();
+    }
+
     $sql_check_email = "SELECT * FROM usuarios WHERE email = '$email'";
     $result_check_email = $conn->query($sql_check_email);
 

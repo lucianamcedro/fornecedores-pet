@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --roxo: rgba(86, 63, 145, 255);
+    --yellow: #f2b22e;
+}
+
+.container-inicio {
+    background-image: url("../img/bg-contato.jpg");
+    background-size: cover;
+    background-position: center 30%;
+    height: 100vh;
+}
+
+.container-usuarios {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 100vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+.container-usuarios h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-usuarios table {
+    width: 100%;
+}
+
+.container-usuarios th,
+.container-usuarios td {
+    padding: 10px;
+    text-align: center;
+}
+
+.container-usuarios th {
+    background-color: var(--roxo);
+    color: #fff;
+}
+
+.container-usuarios tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.container-usuarios td.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-usuarios button {
+    padding: 6px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-usuarios .btn-success {
+    background-color: var(--yellow);
+    color: black;
+    border: none;
+}
+
+.container-usuarios .btn-success:hover {
+    background-color: #e0a800;
+}
+
+.container-usuarios .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.container-usuarios .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.container-usuarios .btn-icon {
+    margin-right: 5px;
+}
+
+
+.header-link {
+    display: flex;
+    gap: 3rem;
+    padding-top: 10px;
+}
+
+.header-link a {
+    color: rgba(255, 255, 255, 0.778);
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.header-link a:hover {
+    color: var(--roxo);
+}
+
+.logo {
+    color: var(--yellow);
+    display: inline-block;
+    font: 400 2rem "Righteous", cursive;
+    font-size: 2.8rem;
+    letter-spacing: -2px;
+    font-weight: 700;
+}
+  
+.logo .span {
+    display: inline-block;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    background-color: transparent;
+    padding: 10px 6%;
+}
