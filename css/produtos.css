@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --roxo: rgba(86, 63, 145, 255);
+    --yellow: #f2b22e;
+}
+
+.container-inicio {
+    background-image: url("../img/bg-contato.jpg");
+    background-size: cover;
+    background-position: center 30%;
+    height: 100vh;
+}
+
+.container-meio {
+    text-align: center;
+}
+
+.container-cadastrar {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 105vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+.container-cadastrar h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-cadastrar form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-cadastrar label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.container-cadastrar input {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    width: calc(50% - 5px);
+    background-color: #f6f6f6;
+    height: 40px;
+}
+
+.container-cadastrar textarea {
+    background-color: #f6f6f6;
+    height: 30px;
+    width: calc(100%);
+    resize: none;
+}
+
+.container-cadastrar input[type="text"]::placeholder {
+    color: #999;
+}
+
+.container-cadastrar button[type="submit"] {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--roxo);
+    color: #fff;
+    cursor: pointer;
+    flex-basis: calc(50% - 5px);
+    height: 90%;
+    margin-top: 10px;
+}
+
+.container-cadastrar button[type="submit"]:hover {
+    background-color: #6c2d73;
+}
+
+.container-cadastrar .email-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.container-cadastrar #email {
+    flex-basis: calc(50% - 5px);
+}
+
+.container-cadastrar i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--roxo);
+}
+
+.container-cadastrar span {
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+}
+
+
+.table {
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 100vh;
+    box-sizing: border-box;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.table th {
+    background-color: var(--roxo);
+    color: #fff;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table td.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table button {
+    padding: 6px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table .btn-success {
+    background-color: var(--yellow);
+    color: black;
+    border: none;
+}
+
+.table .btn-success:hover {
+    background-color: #e0a800;
+}
+
+.table .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.table .btn-danger:hover {
+    background-color: #c82333;
+}
+
+
+.table .button-group {
+    display: flex;
+   
+}
+
+.header-link {
+    display: flex;
+    gap: 3rem;
+    padding-top: 10px;
+}
+
+.header-link a {
+    color: rgba(255, 255, 255, 0.778);
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.header-link a:hover {
+    color: var(--roxo);
+}
+
+.logo {
+    color: var(--yellow);
+    display: inline-block;
+    font: 400 2rem "Righteous", cursive;
+    font-size: 2.8rem;
+    letter-spacing: -2px;
+    font-weight: 700;
+}
+  
+.logo .span {
+    display: inline-block;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    background-color: transparent;
+    padding: 10px 6%;
+}
+
+  
+.header-link li:last-child a:last-child{
+    border-radius: 10px;
+    padding: 12px 20px;
+    background-color: var(--roxo);
+    color: white;
+    transition: 0.5s;
+  }
+
+  .header-link li:last-child a:last-child:hover{
+    background-color: #ffda6a;
+  }

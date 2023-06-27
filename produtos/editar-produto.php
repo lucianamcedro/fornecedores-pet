@@ -1,38 +1,32 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="icon" type="image/png" href="./img/ico.jpg">
-    <title>Editar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastrar.css">
+    <link rel="icon" type="image/png" href="/img/ico.jpg">
+    <title>Editar Produto</title>
 </head>
 
 <body>
-    <div class="container-meio">
-        <div class="container-inicio">
-            <header>
-                <h1>
-                    <a href="../index.php" class="logo">AuPet<span class="span">.</span></a>
-                </h1>
-                <div class="header-link">
-                    <li>
-                        <a href="../index.php">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="../contato.php" class="contato">Contato</a>
-                    </li>
-                    <li>
-                        <a href="../fornecedores.php" class="fornecedores">Fornecedores</a>
-                    </li>
-                    <li>
-                        <a href="#login" class="login">Login</a>
-                    </li>
-                </div>
-            </header>
-
-            <?php
+    <div class="container-inicio">
+        <header>
+            <h1>
+                <a href="../index.php" class="logo">AuPet<span class="span">.</span></a>
+            </h1>
+            <div class="header-link">
+                <li>
+                    <a href="../index.php">Inicio</a>
+                </li>
+                <li> <a href="../contato.php" class="contato">Contato</a></li>
+                <li><a href="../fornecedores.php" class="fornecedores">Fornecedores</a></li>
+            </div>
+        </header>
+        <?php
     include_once('../auth/config.php');
 
     if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"])) {
@@ -75,36 +69,51 @@
     }
 ?>
 
-<h1>Editar Produto</h1>
-
-<form action="" method="POST">
-    <input type="hidden" name="acao" value="editar">
-    <input type="hidden" name="id" value="<?php echo isset($row['id']) ? $row['id'] : ''; ?>">
-    <div class="mb-3">
-        <label>Nome</label>
-        <input type="text" name="nome" value="<?php echo isset($row['nome']) ? $row['nome'] : ''; ?>" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label>Quantidade</label>
-        <input type="number" name="quantidade" value="<?php echo isset($row['quantidade']) ? $row['quantidade'] : ''; ?>" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label>Valor</label>
-        <input type="text" name="valor" value="<?php echo isset($row['valor']) ? $row['valor'] : ''; ?>" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label>Imagem</label>
-        <input type="text" name="imagem" value="<?php echo isset($row['imagem']) ? $row['imagem'] : ''; ?>" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label>Descrição</label>
-        <textarea name="descricao" class="form-control"><?php echo isset($row['descricao']) ? $row['descricao'] : ''; ?></textarea>
-    </div>
-    <div class="mb-3">
-        <button type="submit" class="btn btn-primary">Salvar</button>
-    </div>
-</form>
-        </div> 
-    </div>
+        <div class="container-cadastrar">
+            <center>
+                <h1>Editar Produto</h1>
+            </center>
+            <br>
+            <form action="" method="POST">
+            <input type="hidden" name="acao" value="editar">
+            <input type="hidden" name="id" value="<?php echo isset($row['id']) ? $row['id'] : ''; ?>">
+                <div style="display: inline-block; width: calc(49%);">
+                    <label>Nome:</label>
+                    <input type="text" name="nome" value="<?php echo isset($row['nome']) ? $row['nome'] : ''; ?>"
+                        class="form-control" style="width:
+                                    100%;">
+                </div>
+                <div style="display: inline-block; width: calc(49%);">
+                    <label>Quantidade:</label>
+                    <input type="number" name="quantidade"
+                        value="<?php echo isset($row['quantidade']) ? $row['quantidade'] : ''; ?>" class="form-control"
+                        style="width: 100%;">
+                </div>
+                <div style="display: inline-block; width: calc(49%);">
+                    <label for="valor">Valor:</label>
+                    <input type="text" name="valor" value="<?php echo isset($row['valor']) ? $row['valor'] : ''; ?>"
+                        class="form-control" style="width: 100%;">
+                </div>
+        
+                <div style="display: inline-block; width: calc(49%);">
+                    <label for="email">Imagem:</label>
+                    <input type="text" name="imagem" value="<?php echo isset($row['imagem']) ? $row['imagem'] : ''; ?>"
+                        class="form-control" style="width:
+                                    100%;">
+                </div>
+                <div style="display: inline-block; width: calc(100%);">
+                    <label for="email">Descrição:</label>
+                    <textarea name="descricao" class="form-control"
+                        style="height: 100px;"><?php echo isset($row['descricao']) ? $row['descricao'] : ''; ?></textarea>
+                </div>
+                <div style="display: inline-block; width: calc(100%);">
+                    <button type="submit" class="btn btn-primary" style="width:
+                                    100%;">Enviar</button>
+                </div>
+               
+            </form>
+            <script src="../script/contato-script.js"></script>
+                        </div>
 </body>
+
 </html>

@@ -14,8 +14,6 @@
 
 <body>
   <div class="container-meio">
-
-
     <div class="container-inicio">
         <header>
             <h1>
@@ -31,13 +29,10 @@
             </div>
         </header>
 
-
-
         <div class="fornecedores-title">
            Conheça nossos
         fornecedores:
         </div>
-
         <div id="empresas-container"></div>
     </div>
           <script src="./script/fornecedores-script.js"></script>
