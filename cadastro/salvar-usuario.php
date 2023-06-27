@@ -26,10 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../cadastro/novo-usuario.php?error=email&nome=" . urlencode($nome) . "&data_nascimento=" . urlencode($data_nascimento));
         exit();
     }
-    
 
-    $sql = "INSERT INTO usuarios (nome, email, senha, data_nascimento)
-    VALUES ('$nome', '$email', '$senha', '$data_nascimento')";
+
+    $role = 'user';
+
+    $sql = "INSERT INTO usuarios (nome, email, senha, data_nascimento, role)
+    VALUES ('$nome', '$email', '$senha', '$data_nascimento', '$role')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<script>alert('Cadastrado com sucesso!');</script>";
