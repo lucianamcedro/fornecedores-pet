@@ -51,6 +51,11 @@
     margin-top: 10vh;
 }
 
+.container-cadastrar h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .container-cadastrar form {
     display: flex;
     flex-wrap: wrap;
