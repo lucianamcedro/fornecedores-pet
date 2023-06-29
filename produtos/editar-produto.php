@@ -55,7 +55,8 @@
         $descricao = $_POST["descricao"];
 
         $stmt = $conn->prepare("UPDATE produtos SET nome = ?, quantidade = ?, valor = ?, imagem = ?, descricao = ? WHERE id = ?");
-        $stmt->bind_param("sidsii", $nome, $quantidade, $valor, $imagem, $descricao, $id);
+        $stmt->bind_param("sidssi", $nome, $quantidade, $valor, $imagem, $descricao, $id);
+
         $stmt->execute();
 
         if ($stmt->affected_rows === 1) {
@@ -104,7 +105,7 @@
                 <div style="display: inline-block; width: calc(100%);">
                     <label for="email">Descrição:</label>
                     <textarea name="descricao" class="form-control"
-                        style="height: 100px;"><?php echo isset($row['descricao']) ? $row['descricao'] : ''; ?></textarea>
+                        style="height: 100px;"></textarea>
                 </div>
                 <div style="display: inline-block; width: calc(100%);">
                     <button type="submit" class="btn btn-primary" style="width:
@@ -112,8 +113,7 @@
                 </div>
                
             </form>
-            <script src="../script/contato-script.js"></script>
-                        </div>
+          
 </body>
 
 </html>

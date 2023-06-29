@@ -9,7 +9,8 @@
         $descricao = $_POST["descricao"];
 
         $sql = "INSERT INTO produtos (nome, quantidade, valor, imagem, descricao)
-                VALUES ('$nome', $quantidade, $valor, '$imagem', '$descricao')";
+        VALUES ('$nome', $quantidade, '$valor', '$imagem', '$descricao')";
+
 
         if ($conn->query($sql) === true) {
             echo "<script>alert('Produto criado com sucesso!');</script>";
@@ -17,6 +18,7 @@
             exit();
         } else {
             echo "Erro ao criar produto: " .  mysqli_error($conn);
+
         }
     }
 ?>
