@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/produtos.css">
+    <link rel="stylesheet" href="../css/listas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="icon" type="image/png" href="./img/ico.jpg">
+    <link rel="icon" type="image/png" href="../img/ico.jpg">
 
     <title>Meus Produtos</title>
 </head>
@@ -37,10 +37,8 @@
 
         include_once('../auth/config.php');
 
-        // Obter o ID do usuário logado
         $usuario_id = $_SESSION["usuario_id"];
-
-        // Consultar os produtos associados ao usuário logado
+        
         $sql = "SELECT p.* FROM produtos p INNER JOIN usuarios u ON p.usuario_id = u.id WHERE u.id = '$usuario_id'";
 
         $res = $conn->query($sql);
