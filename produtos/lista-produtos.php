@@ -33,9 +33,16 @@
         </header>
 
         <?php
+        session_start();
+
         include_once('../auth/config.php');
 
-        $sql = "SELECT * FROM produtos";
+        // Obter o ID do usuário logado
+        $usuario_id = $_SESSION["usuario_id"];
+
+        // Consultar os produtos associados ao usuário logado
+        $sql = "SELECT p.* FROM produtos p INNER JOIN usuarios u ON p.usuario_id = u.id WHERE u.id = '$usuario_id'";
+
         $res = $conn->query($sql);
 
         if ($res === false) {
@@ -46,7 +53,6 @@
 
         echo "<table class='table'>";
         echo "<tr>";
-        echo "<th>#</th>";
         echo "<th>Nome</th>";
         echo "<th>Quantidade</th>";
         echo "<th>Valor</th>";
@@ -58,7 +64,6 @@
         if ($qtd > 0) {
             while ($row = $res->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row['id'] . "</td>";
                 echo "<td>" . $row['nome'] . "</td>";
                 echo "<td>" . $row['quantidade'] . "</td>";
                 echo "<td>" . $row['valor'] . "</td>";
@@ -75,22 +80,24 @@
             }
         } else {
             echo "<tr>";
-            echo "<td colspan='7'>Nenhum resultado encontrado!</td>";
+            echo "<td colspan='6'>Nenhum resultado encontrado!</td>";
             echo "</tr>";
         }
         echo "</table>";
         ?>
+
+
         <div class="container-cadastrar">
             <center>
                 <h1>Criar Produto</h1>
             </center>
             <form action="salvar-produto.php" method="POST">
 
+                <input type="hidden" name="usuario_id" value="<?php echo $usuario_id; ?>">
+
                 <div style="display: inline-block; width: calc(45%);">
                     <label>Nome:</label>
-
-                    <input type="text" name="nome" class="form-control" style="width:
-                            100%;">
+                    <input type="text" name="nome" class="form-control" style="width: 100%;">
                 </div>
                 <div style="display: inline-block; width: calc(18%);">
                     <label>Quantidade:</label>
@@ -100,24 +107,22 @@
                     <label for="valor">Valor:</label>
                     <input type="text" name="valor" class="form-control" style="width: 100%;">
                 </div>
-
                 <div style="display: inline-block; width: calc(15%);">
                     <label for="email">Imagem:</label>
-                    <input type="text" name="imagem" class="form-control" style="width:
-                            100%;">
+                    <input type="text" name="imagem" class="form-control" style="width: 100%;">
                 </div>
                 <div style="display: inline-block; width: calc(100%);">
                     <label for="email">Descrição:</label>
                     <textarea name="descricao" class="form-control" style="height: 10vh;"></textarea>
                 </div>
                 <div style="display: inline-block; width: calc(100%);">
-                    <button type="submit" class="btn btn-primary" style="width:
-                            100%;">Enviar</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar</button>
                 </div>
-
             </form>
-            <script src="../script/contato-script.js"></script>
+        </div>
 
+        <script src="../script/contato-script.js"></script>
+    </div>
 </body>
 
 </html>

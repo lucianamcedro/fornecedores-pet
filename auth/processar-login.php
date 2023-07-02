@@ -25,6 +25,7 @@ $qtd = $res->num_rows;
 
 if ($qtd > 0) {
     $row = $res->fetch_assoc();
+    $_SESSION["usuario_id"] = $row["id"];
     $_SESSION["usuario"] = $row["email"]; 
     $_SESSION["role"] = $row["role"]; 
 
