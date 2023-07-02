@@ -98,7 +98,6 @@
                             100%;">Enviar</button>
                 </div>
             </form>
-            <script src="../script/contato-script.js"></script>
 
 </body>
 

@@ -187,7 +187,36 @@
 
 .table .button-group {
     display: flex;
-   
+
+}
+
+.btn-products {
+    display: block;
+    width: 100%;
+    padding: 5%;
+    color: white;
+    background-color: var(--roxo);
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-products:hover {
+    background-color: var(--yellow);
+    
+}
+
+.btn-success.custom-button,
+.btn-danger.custom-button,
+.btn-products {
+    padding: 5px;
+}
+
+.btn-success.custom-button i.btn-icon,
+.btn-danger.custom-button i.btn-icon,
+.btn-products i {
+    padding: 5px;
 }
 
 .header-link {
@@ -215,7 +244,7 @@
     letter-spacing: -2px;
     font-weight: 700;
 }
-  
+
 .logo .span {
     display: inline-block;
     color: white;
@@ -234,15 +263,15 @@ header {
     padding: 10px 6%;
 }
 
-  
-.header-link li:last-child a:last-child{
+
+.header-link li:last-child a:last-child {
     border-radius: 10px;
     padding: 12px 20px;
     background-color: var(--roxo);
     color: white;
     transition: 0.5s;
-  }
+}
 
-  .header-link li:last-child a:last-child:hover{
+.header-link li:last-child a:last-child:hover {
     background-color: #ffda6a;
-  }
+}

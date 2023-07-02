@@ -119,7 +119,6 @@
             </form>
         </div>
 
-        <script src="../script/contato-script.js"></script>
     </div>
 </body>
 

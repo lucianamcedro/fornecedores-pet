@@ -46,8 +46,6 @@
                 </div>
             </form>
         </div>
-        <script src="../script/contato-script.js"></script>
-
 </body>
 
 </html>

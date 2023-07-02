@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -35,49 +33,56 @@
         </header>
 
         <?php
-            include_once('../auth/config.php');
+        include_once('../auth/config.php');
 
-            $sql = "SELECT * FROM usuarios";
-            $res = $conn->query($sql);
+        $sql = "SELECT * FROM usuarios";
+        $res = $conn->query($sql);
 
-            if ($res === false) {
-                die("Erro na consulta: " .  mysqli_error($conn));
-            }
+        if ($res === false) {
+            die("Erro na consulta: " . mysqli_error($conn));
+        }
 
-            $qtd = $res->num_rows;
+        $qtd = $res->num_rows;
 
-            if ($qtd > 0) {
-                echo "<h1>Usuários Cadastrados</h1>";
-                echo "<table class='table'>";
+        if ($qtd > 0) {
+            echo "<h1>Usuários Cadastrados</h1>";
+            echo "<table class='table'>";
+            echo "<tr>";
+            echo "<th>Nome</th>";
+            echo "<th>Email</th>";
+            echo "<th>Data de Nascimento</th>";
+
+            echo "<th>Ações</th>";
+            echo "<th>Ver produtos</th>";
+            echo "</tr>";
+
+            while ($row = $res->fetch_assoc()) {
                 echo "<tr>";
-                echo "<th>Nome</th>";
-                echo "<th>Email</th>";
-                echo "<th>Data de Nascimento</th>";
-                echo "<th>Ações</th>";
+                echo "<td>" . $row["nome"] . "</td>";
+                echo "<td>" . $row["email"] . "</td>";
+                echo "<td>" . $row["data_nascimento"] . "</td>";
+
+                echo "<td>";
+                echo "<div class='button-group'>";
+                echo "<button onclick=\"location.href='editar.php?id=" . $row["id"] . "';\" class='btn btn-success custom-button'><i class='fas fa-pencil-alt btn-icon'></i>Editar</button>";
+                echo "<button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluir.php?id=" . $row["id"] . "';} else{false}\" class='btn btn-danger custom-button'><i class='fas fa-trash-alt btn-icon'></i>Excluir</button>";
+                echo "</div>";
+                echo "</td>";
+                echo "<td>";
+                echo "<button onclick=\"location.href='../produtos/produtos-usuario.php?usuario_id=" . $row["id"] . "';\" class='btn-products'><i class='fas fa-eye'></i> Produtos</button>";
+
+                echo "</td>";
                 echo "</tr>";
-
-                while ($row = $res->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row["nome"] . "</td>";
-                    echo "<td>" . $row["email"] . "</td>";
-                    echo "<td>" . $row["data_nascimento"] . "</td>";
-                    echo "<td>";
-                    echo "<div class='button-group'>";
-                    echo "<button onclick=\"location.href='editar.php?id=" . $row["id"] . "';\" class='btn btn-success custom-button'><i class='fas fa-pencil-alt btn-icon'></i>Editar</button>";
-                    echo "<button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluir.php?id=" . $row["id"] . "';} else{false}\" class='btn btn-danger custom-button'><i class='fas fa-trash-alt btn-icon'></i>Excluir</button>";
-                    echo "</td>";
-                    echo "</tr>";
-                }
-
-                echo "</table>";
-            } else {
-                echo "<p class='alert alert-danger'>Nenhum resultado encontrado!</p>";
             }
-            ?>
 
-      
+            echo "</table>";
+        } else {
+            echo "<p class='alert alert-danger'>Nenhum resultado encontrado!</p>";
+        }
+        ?>
 
-        <script src="../script/contato-script.js"></script>
+
+
     </div>
 </body>
 
