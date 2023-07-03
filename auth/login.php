@@ -25,7 +25,6 @@
             </div>
         </header>
         <div class="container-login">
-
         <div class="container-infos">
                 <h1 class="title-contact">Login</h1>
                 <p class="contact-info">Bem vindo de volta!</p>         
@@ -47,9 +46,16 @@
 
                 <div style="display: inline-block; width: calc(100%);">
                     <button type="submit" class="btn btn-primary" style="width:
-                            100%;">Entrar</button>
+                            100%;">Continuar</button>
                 </div>
             </form>
+
+            <div class="end-cadastro">
+            <br>
+            <p class="contact-info">Não tem acesso? <a href="../cadastro/novo-usuario.php"><strong>Cadastra-se</strong></a></p>
+
+      
+            </div>
         </div>
 </body>
 

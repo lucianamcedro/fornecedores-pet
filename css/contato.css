@@ -19,7 +19,6 @@
 }
 
 
-
 .container-inicio {
   background-image: url("../img/bg-contato.jpg");
   background-size: cover;
@@ -36,8 +35,6 @@
 .container-meio {
   background-color: var(--roxo);
 }
-
-
 
 .container-contact {
   background-color: #fff;
@@ -200,6 +197,7 @@
 }
 
 .title-contact {
+  font-weight: 400;
   font-size: 26px;
   padding-bottom: 5px;
 }

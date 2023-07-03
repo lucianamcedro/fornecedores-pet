@@ -20,7 +20,7 @@
 
 
 .container-inicio {
-    background-image: url("../img/bg-contato.jpg");
+    background-image: url("../img/cadastro.png");
     background-size: cover;
     background-position: center 30%;
     height: 100vh;
@@ -42,16 +42,11 @@
 .container-cadastrar {
     background-color: #fff;
     border-radius: 10px;
-    padding: 40px;
-    max-width: 600px;
+    padding: 30px;
+    max-width: 450px;
     box-sizing: border-box;
-    margin: 0 auto;
-    margin-top: 10vh;
-}
-
-.container-cadastrar h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-top: 5vh;
+    margin-left: 10%;
 }
 
 .container-cadastrar form {
@@ -76,18 +71,17 @@
     width: calc(50% - 5px);
     background-color: #f6f6f6;
     height: 40px;
-}
-
-.container-cadastrar textarea {
-    background-color: #f6f6f6;
-    height: 30px;
-    width: calc(100%);
-    resize: none;
+    color: #999;
 }
 
 .container-cadastrar input[type="text"]::placeholder {
     color: #999;
 }
+
+.container-cadastrar input:focus {
+    border-color: var(--roxo);
+}
+
 
 .container-cadastrar button[type="submit"] {
     border-radius: 5px;
@@ -105,6 +99,7 @@
 .container-cadastrar button[type="submit"]:hover {
     background-color: #6c2d73;
 }
+
 
 .container-cadastrar .email-button-container {
     display: flex;
@@ -126,7 +121,7 @@
 .container-cadastrar span {
     font-size: 18px;
     font-weight: normal;
-    color: black;
+    color: #999;
 }
 
 
@@ -180,3 +175,15 @@ header {
     text-decoration: none;
   }
 
+  .contact-info {
+    font-size: 15px;
+    color: #888;
+    font-weight: 300;
+  }
+  
+  .title-contact {
+    font-size: 26px;
+    padding-bottom: 5px;
+    
+  }
+  

@@ -68,7 +68,7 @@
                 if (!empty($row['imagem'])) {
                     echo "<img src='../img/image.png' alt='Imagem do produto' class='product-image' style='width: 30px; height: 30px;' onclick='openModal(\"" . $row['imagem'] . "\")'>";
                 } else {
-                    echo "<" . $row['id'] . "'><img src='../img/add_image.png' alt='Adicionar Imagem' class='product-image' style='width: 30px; height: 30px;'></a>";
+                    echo "<img src='../img/add_image.png' alt='Adicionar Imagem' class='product-image' style='width: 30px; height: 30px;'></a>";
                 }
                 
 

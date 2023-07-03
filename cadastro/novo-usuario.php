@@ -32,6 +32,13 @@ $data_nascimento = isset($_GET['data_nascimento']) ? $_GET['data_nascimento'] : 
             </div>
         </header>
         <div class="container-cadastrar">
+
+  <div class="container-infos">
+  <h1 class="title-contact">Criar seu cadastro</h1>
+<p class="contact-info">Para criar uma conta, por favor, preencha todos os campos abaixo.</p>
+   
+            </div>
+
             <form action="salvar-usuario.php" method="POST">
                 <div style="display: inline-block; width: calc(100%);">
                     <label for="nome">Nome:</label>
@@ -55,7 +62,7 @@ $data_nascimento = isset($_GET['data_nascimento']) ? $_GET['data_nascimento'] : 
                 </div>
                 <div style="display: inline-block; width: calc(100%);">
                 <button type="submit" class="btn btn-primary" style="width:
-                            100%;">Enviar</button>
+                            100%;">Criar cadastro</button>
             </div> 
          </form>
          <div class="modal" id="emailModal" tabindex="-1" role="dialog">
