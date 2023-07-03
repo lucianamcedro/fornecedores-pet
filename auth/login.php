@@ -26,6 +26,11 @@
         </header>
         <div class="container-login">
 
+        <div class="container-infos">
+                <h1 class="title-contact">Login</h1>
+                <p class="contact-info">Bem vindo de volta!</p>         
+            </div>
+
             <form method="POST" action="processar-login.php">
 
 
@@ -35,8 +40,8 @@
                         style="width: 100%;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 </div>
                 <div style="display: inline-block; width: calc(100%);">
-                    <label for="telefone">Senha:</label>
-                    <input type="password" name="senha" class="form-control" name="phone" style="width:
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" class="form-control" name="senha" style="width:
                             100%;">
                 </div>
 
