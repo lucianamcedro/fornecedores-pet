@@ -6,8 +6,6 @@ function openImagePicker() {
     }
 }
 
-
-
 function openModal(imageUrl) {
 var modal = document.getElementById("modal");
 var modalClose = document.getElementById("modal-close");

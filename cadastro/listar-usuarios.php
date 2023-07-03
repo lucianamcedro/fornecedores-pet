@@ -46,8 +46,6 @@
 
         if ($qtd > 0) {
             echo '<h1 style="font-weight: 400; text-align: center;">Usuários Cadastrados</h1>';
-
-
             echo "<table class='table'>";
             echo "<tr>";
             echo "<th>Nome</th>";
@@ -82,9 +80,6 @@
             echo "<p class='alert alert-danger'>Nenhum resultado encontrado!</p>";
         }
         ?>
-
-
-
     </div>
 </body>
 

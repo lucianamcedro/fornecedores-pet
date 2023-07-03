@@ -63,15 +63,11 @@
                 echo "<td>" . $row['quantidade'] . "</td>";
                 echo "<td>" . $row['valor'] . "</td>";
                 echo "<td>";
-
-
                 if (!empty($row['imagem'])) {
                     echo "<img src='../img/image.png' alt='Imagem do produto' class='product-image' style='width: 30px; height: 30px;' onclick='openModal(\"" . $row['imagem'] . "\")'>";
                 } else {
                     echo "<img src='../img/add_image.png' alt='Adicionar Imagem' class='product-image' style='width: 30px; height: 30px;'></a>";
                 }
-                
-
                 echo "</td>";
                 echo "<td>" . $row['descricao'] . "</td>";
                 echo "</tr>";
@@ -83,12 +79,12 @@
         }
         echo "</table>";
         ?>
- <div id="modal" class="modal">
-    <div id="modal-content" class="modal-content">
-        <span id="modal-close" class="modal-close">&times;</span>
-        <img id="modal-image" src="" alt="Imagem ampliada" style="width: 50%; display: block; margin: 0 auto;">
-    </div>
-</div>
+        <div id="modal" class="modal">
+            <div id="modal-content" class="modal-content">
+                <span id="modal-close" class="modal-close">&times;</span>
+                <img id="modal-image" src="" alt="Imagem ampliada" style="width: 50%; display: block; margin: 0 auto;">
+            </div>
+        </div>
     </div>
     <script src="../script/produtos.js"></script>
 </body>

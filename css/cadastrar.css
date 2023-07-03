@@ -136,54 +136,53 @@ header {
     background: transparent;
     background-color: transparent;
     padding: 10px 6%;
-    
-  }
-  
-  .header-link {
+
+}
+
+.header-link {
     display: flex;
     gap: 3rem;
     padding-top: 10px;
     cursor: pointer;
-  }
-  
-  .header-link a {
+}
+
+.header-link a {
     color: rgba(255, 255, 255, 0.778);
     font-weight: 700;
     font-size: 20px;
     transition: 0.5s;
     text-decoration: none;
-  }
-  
-  .header-link a:hover {
-    color: var(--roxo);
-  }
+}
 
-  .logo {
+.header-link a:hover {
+    color: var(--roxo);
+}
+
+.logo {
     color: var(--yellow);
     display: inline-block;
     font: 400 2rem "Righteous", cursive;
     font-size: 2.8rem;
     letter-spacing: -2px;
-    font-weight: 700;    
+    font-weight: 700;
     text-decoration: none;
-  }
-  
+}
 
-  .logo .span {
+
+.logo .span {
     display: inline-block;
     color: white;
     text-decoration: none;
-  }
+}
 
-  .contact-info {
+.contact-info {
     font-size: 15px;
     color: #888;
     font-weight: 300;
-  }
-  
-  .title-contact {
+}
+
+.title-contact {
     font-size: 26px;
     padding-bottom: 5px;
-    
-  }
-  
+
+}

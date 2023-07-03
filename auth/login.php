@@ -25,14 +25,12 @@
             </div>
         </header>
         <div class="container-login">
-        <div class="container-infos">
+            <div class="container-infos">
                 <h1 class="title-contact">Login</h1>
-                <p class="contact-info">Bem vindo de volta!</p>         
+                <p class="contact-info">Bem vindo de volta!</p>
             </div>
 
             <form method="POST" action="processar-login.php">
-
-
                 <div style="display: inline-block; width: calc(100%);">
                     <label for="email">Email:</label>
                     <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu email"
@@ -51,10 +49,11 @@
             </form>
 
             <div class="end-cadastro">
-            <br>
-            <p class="contact-info">Não tem acesso? <a href="../cadastro/novo-usuario.php"><strong>Cadastra-se</strong></a></p>
+                <br>
+                <p class="contact-info">Não tem acesso? <a
+                        href="../cadastro/novo-usuario.php"><strong>Cadastra-se</strong></a></p>
 
-      
+
             </div>
         </div>
 </body>

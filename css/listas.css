@@ -204,7 +204,7 @@
 
 .btn-products:hover {
     background-color: var(--yellow);
-    
+
 }
 
 .btn-success.custom-button,
@@ -226,14 +226,14 @@
 }
 
 .header-link a {
-    color:var(--roxo);
+    color: var(--roxo);
     font-weight: 700;
     font-size: 20px;
     transition: 0.5s;
 }
 
 .header-link a:hover {
-    color:  rgba(255, 255, 255, 0.778);
+    color: rgba(255, 255, 255, 0.778);
 }
 
 .logo {

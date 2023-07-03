@@ -33,10 +33,10 @@ $data_nascimento = isset($_GET['data_nascimento']) ? $_GET['data_nascimento'] : 
         </header>
         <div class="container-cadastrar">
 
-  <div class="container-infos">
-  <h1 class="title-contact">Criar seu cadastro</h1>
-<p class="contact-info">Para criar uma conta, por favor, preencha todos os campos abaixo.</p>
-   
+            <div class="container-infos">
+                <h1 class="title-contact">Criar seu cadastro</h1>
+                <p class="contact-info">Para criar uma conta, por favor, preencha todos os campos abaixo.</p>
+
             </div>
 
             <form action="salvar-usuario.php" method="POST">
@@ -61,11 +61,11 @@ $data_nascimento = isset($_GET['data_nascimento']) ? $_GET['data_nascimento'] : 
                             100%;">
                 </div>
                 <div style="display: inline-block; width: calc(100%);">
-                <button type="submit" class="btn btn-primary" style="width:
+                    <button type="submit" class="btn btn-primary" style="width:
                             100%;">Criar cadastro</button>
-            </div> 
-         </form>
-         <div class="modal" id="emailModal" tabindex="-1" role="dialog">
+                </div>
+            </form>
+            <div class="modal" id="emailModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -83,7 +83,7 @@ $data_nascimento = isset($_GET['data_nascimento']) ? $_GET['data_nascimento'] : 
                     </div>
                 </div>
             </div>
-       
+
         </div>
     </div>
 
@@ -104,4 +104,5 @@ $data_nascimento = isset($_GET['data_nascimento']) ? $_GET['data_nascimento'] : 
         });
     </script>
 </body>
+
 </html>

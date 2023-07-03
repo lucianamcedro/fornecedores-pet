@@ -9,8 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $descricao = $_POST["descricao"];
 
 
-      $valor = str_replace(",", ".", $valor);
-      $valor = number_format($valor, 2, ".=", ""); 
+    $valor = str_replace(",", ".", $valor);
+    $valor = number_format($valor, 2, ".=", "");
 
     if (!isset($_SESSION["usuario"])) {
         echo "Erro: Usuário não encontrado.";

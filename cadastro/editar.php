@@ -64,7 +64,7 @@
 
 
         <div class="container-cadastrar">
-        <h1 style="font-weight: 400; text-align: left;">Editar Usuário</h1>
+            <h1 style="font-weight: 400; text-align: left;">Editar Usuário</h1>
 
             <br>
             <form action="?page=salvar" method="POST">

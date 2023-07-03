@@ -11,7 +11,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="icon" type="image/png" href="../img/ico.jpg">
-
     <title>Meus Produtos</title>
 
 </head>
@@ -36,7 +35,6 @@
             </div>
         </header>
 
-        
         <?php
         session_start();
 
@@ -73,16 +71,12 @@
                 echo "<td>" . $row['quantidade'] . "</td>";
                 echo "<td>" . $row['valor'] . "</td>";
                 echo "<td>";
-
-
                 if (!empty($row['imagem'])) {
                     echo "<img src='../img/image.png' alt='Imagem do produto' class='product-image' style='width: 30px; height: 30px;' onclick='openModal(\"" . $row['imagem'] . "\")'>";
                 } else {
                     echo "<a href='editar-produto.php?id=" . $row['id'] . "'><img src='../img/add_image.png' alt='Adicionar Imagem' class='product-image' style='width: 30px; height: 30px;'></a>";
 
                 }
-
-
                 echo "</td>";
                 echo "<td class='description-cell'>";
                 echo "<div class='description-content' style='text-align: center;'>";
@@ -108,7 +102,7 @@
 
 
         <div class="container-cadastrar">
-   
+
             <h1 style="font-weight: 400; text-align: left;">Novo Produto</h1>
 
             <form action="salvar-produto.php" method="POST" enctype="multipart/form-data">
@@ -147,13 +141,13 @@
     </div>
 
     <div id="modal" class="modal">
-    <div id="modal-content" class="modal-content">
-        <span id="modal-close" class="modal-close">&times;</span>
-        <img id="modal-image" src="" alt="Imagem ampliada" style="width: 50%; display: block; margin: 0 auto;">
+        <div id="modal-content" class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <img id="modal-image" src="" alt="Imagem ampliada" style="width: 50%; display: block; margin: 0 auto;">
+        </div>
     </div>
-</div>
 
-<script src="../script/produtos.js"></script>
+    <script src="../script/produtos.js"></script>
 </body>
 
 </html>

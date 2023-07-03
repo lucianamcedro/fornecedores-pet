@@ -27,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-
     $role = 'user';
 
     $sql = "INSERT INTO usuarios (nome, email, senha, data_nascimento, role)

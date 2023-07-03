@@ -12,10 +12,11 @@
   list-style: none;
   text-decoration: none;
 }
+
 :root {
-  --roxo: rgba(86,63,145,255);
+  --roxo: rgba(86, 63, 145, 255);
   --yellow: #f2b22e;
-  --prev-next:  rgba(86, 63, 145, 0.8);
+  --prev-next: rgba(86, 63, 145, 0.8);
 }
 
 
@@ -27,20 +28,21 @@
 
 
 }
-.body{
+
+.body {
   background-color: var(--roxo);
 }
 
 .container-meio {
   background-color: var(--roxo);
-  
+
 
 }
 
 .container {
   padding-top: 10%;
   display: flex;
-  justify-content: left;  
+  justify-content: left;
 
 }
 
@@ -73,7 +75,7 @@
 .button-cadastrar {
   margin-top: 10px;
   background-color: var(--yellow);
-  color:var(--roxo);
+  color: var(--roxo);
   font-weight: bold;
   font-size: 18px;
   border: none;
@@ -83,7 +85,7 @@
   width: 450px;
 }
 
-.button-cadastrar:hover{
+.button-cadastrar:hover {
   background-color: #ffda6a;
 }
 
@@ -95,7 +97,7 @@
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
-  }
+}
 
 .container-carrosel {
   max-width: 1000px;
@@ -117,8 +119,8 @@
   width: 100%;
   object-fit: cover;
   height: 300px;
-  margin-right: 20px; 
-  border-radius: 10px; 
+  margin-right: 20px;
+  border-radius: 10px;
 }
 
 .carousel-images div {
