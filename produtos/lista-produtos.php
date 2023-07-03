@@ -108,9 +108,9 @@
 
 
         <div class="container-cadastrar">
-            <center>
-                <h1>Criar Produto</h1>
-            </center>
+   
+            <h1 style="font-weight: 400; text-align: left;">Novo Produto</h1>
+
             <form action="salvar-produto.php" method="POST" enctype="multipart/form-data">
 
                 <input type="hidden" name="usuario_id" value="<?php echo $usuario_id; ?>">
@@ -140,7 +140,7 @@
                     <textarea name="descricao" class="form-control" style="height: 10vh;"></textarea>
                 </div>
                 <div style="display: inline-block; width: calc(100%);">
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Criar produto</button>
                 </div>
             </form>
         </div>

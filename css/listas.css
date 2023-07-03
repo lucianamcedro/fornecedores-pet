@@ -84,7 +84,7 @@
     border: none;
     padding: 10px;
     font-size: 18px;
-    background-color: var(--yellow);
+    background-color: var(--roxo);
     color: #fff;
     cursor: pointer;
     flex-basis: calc(50% - 5px);
@@ -138,7 +138,7 @@
 }
 
 .table th {
-    background-color: var(--yellow);
+    background-color: var(--roxo);
     color: #fff;
 }
 
@@ -333,3 +333,28 @@
 }
 
 
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    background-color: transparent;
+    padding: 10px 6%;
+}
+
+
+.header-link li:last-child a:last-child {
+    border-radius: 10px;
+    padding: 12px 20px;
+    background-color: var(--roxo);
+    color: white;
+    transition: 0.5s;
+}
+
+.header-link li:last-child a:last-child:hover {
+    background-color: #ffda6a;
+}

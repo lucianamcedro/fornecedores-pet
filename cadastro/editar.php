@@ -64,9 +64,8 @@
 
 
         <div class="container-cadastrar">
-            <center>
-                <h1>Editar Usuário</h1>
-            </center>
+        <h1 style="font-weight: 400; text-align: left;">Editar Usuário</h1>
+
             <br>
             <form action="?page=salvar" method="POST">
                 <input type="hidden" name="acao" value="editar">
