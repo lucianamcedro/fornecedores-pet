@@ -108,6 +108,11 @@
     margin-bottom: 10px;
   }
   
+  .container-contact input:focus {
+    border: 2px solid var(--roxo);
+  }
+
+
   .container-contact #email {
     flex-basis: calc(50% - 5px);
   }
@@ -184,10 +189,24 @@
     display: inline-block;
     vertical-align: middle;
   }
-  
+
+ .contact-info,
+ .form-instructions {
+  font-size: 16px;
+  color: #888;
+  font-weight: 300;
+}
+
+.title-contact {
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+.container-infos {
+  padding-bottom: 10px;
+} 
   @media screen and (max-width: 700px) {
     .modal-content {
       width: 90%;
     }
   }
-  
