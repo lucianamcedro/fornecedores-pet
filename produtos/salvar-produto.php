@@ -6,8 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST["nome"];
     $quantidade = $_POST["quantidade"];
     $valor = $_POST["valor"];
-    $imagem = $_POST["imagem"];
     $descricao = $_POST["descricao"];
+
+
+      $valor = str_replace(",", ".", $valor);
+      $valor = number_format($valor, 2, ".=", ""); 
 
     if (!isset($_SESSION["usuario"])) {
         echo "Erro: Usuário não encontrado.";
@@ -27,6 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $row = $result->fetch_assoc();
     $usuario_id = $row["id"];
 
+    $imagem = $_POST['imagem'];
+
     $sql_insert_produto = "INSERT INTO produtos (nome, quantidade, valor, imagem, descricao, usuario_id)
         VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -41,6 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Erro ao criar produto: " . $stmt->error;
     }
     $stmt->close();
+
     $conn->close();
+
 }
 ?>

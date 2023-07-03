@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/listas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-j6hZn7s/t4W0BOAR+MEQeDh/Rw8iizFT1Eiq25eo7DwXkWj4yqTW/gUiuo3vOlAr1OniB4FQUG+ACeU5jm5sdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="icon" type="image/png" href="../img/ico.jpg">
 
     <title>Meus Produtos</title>
+
 </head>
 
 <body>
@@ -32,13 +36,14 @@
             </div>
         </header>
 
+        
         <?php
         session_start();
 
         include_once('../auth/config.php');
 
         $usuario_id = $_SESSION["usuario_id"];
-        
+
         $sql = "SELECT p.* FROM produtos p INNER JOIN usuarios u ON p.usuario_id = u.id WHERE u.id = '$usuario_id'";
 
         $res = $conn->query($sql);
@@ -62,11 +67,28 @@
         if ($qtd > 0) {
             while ($row = $res->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row['nome'] . "</td>";
+                echo "<td class='name-cell'>";
+                echo "<div class='name-content'>" . $row['nome'] . "</div>";
+                echo "</td>";
                 echo "<td>" . $row['quantidade'] . "</td>";
                 echo "<td>" . $row['valor'] . "</td>";
-                echo "<td>" . $row['imagem'] . "</td>";
-                echo "<td>" . $row['descricao'] . "</td>";
+                echo "<td>";
+
+
+                if (!empty($row['imagem'])) {
+                    echo "<img src='../img/image.png' alt='Imagem do produto' class='product-image' style='width: 30px; height: 30px;' onclick='openModal(\"" . $row['imagem'] . "\")'>";
+                } else {
+                    echo "<a href='editar-produto.php?id=" . $row['id'] . "'><img src='../img/add_image.png' alt='Adicionar Imagem' class='product-image' style='width: 30px; height: 30px;'></a>";
+
+                }
+
+
+                echo "</td>";
+                echo "<td class='description-cell'>";
+                echo "<div class='description-content' style='text-align: center;'>";
+                echo $row['descricao'];
+                echo "</div>";
+                echo "</td>";
                 echo "<td>";
                 echo "<div class='button-group'>";
                 echo "<button onclick=\"location.href='editar-produto.php?id=" . $row['id'] . "';\" class='btn btn-success'><i class='fas fa-edit btn-icon'></i>Editar</button>";
@@ -89,7 +111,7 @@
             <center>
                 <h1>Criar Produto</h1>
             </center>
-            <form action="salvar-produto.php" method="POST">
+            <form action="salvar-produto.php" method="POST" enctype="multipart/form-data">
 
                 <input type="hidden" name="usuario_id" value="<?php echo $usuario_id; ?>">
 
@@ -106,8 +128,12 @@
                     <input type="text" name="valor" class="form-control" style="width: 100%;">
                 </div>
                 <div style="display: inline-block; width: calc(15%);">
-                    <label for="email">Imagem:</label>
-                    <input type="text" name="imagem" class="form-control" style="width: 100%;">
+                    <label for="image">Imagem:</label>
+                    <input type="hidden" id="imagem-input" name="imagem" value="">
+
+                    <span class="input-group-text" onclick="openImagePicker()" style="width: 100%;">
+                        <img src="../img/add_image.png" alt="Adicionar Imagem" style="width: 42px; height: 42px;">
+                    </span>
                 </div>
                 <div style="display: inline-block; width: calc(100%);">
                     <label for="email">Descrição:</label>
@@ -118,8 +144,16 @@
                 </div>
             </form>
         </div>
-
     </div>
+
+    <div id="modal" class="modal">
+    <div id="modal-content" class="modal-content">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <img id="modal-image" src="" alt="Imagem ampliada" style="width: 50%; display: block; margin: 0 auto;">
+    </div>
+</div>
+
+<script src="../script/produtos.js"></script>
 </body>
 
 </html>
