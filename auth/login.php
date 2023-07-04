@@ -13,9 +13,7 @@
 <body>
     <div class="container-inicio">
         <header>
-            <h1>
-                <a href="../index.php" class="logo">AuPet<span class="span">.</span></a>
-            </h1>
+                <a href="../index.php" class="logo"><img src='../img/logo.png'></a>
             <div class="header-link">
                 <li>
                     <a href="../index.php">Inicio</a>
@@ -55,6 +53,9 @@
 
 
             </div>
+
+            <a href="recuperar-senha.php">Esqueceu sua senha?</a>
+
         </div>
 </body>
 
